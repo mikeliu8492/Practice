@@ -34,6 +34,10 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 
+const api = require('./api.js');
+app.use('/api', api(app, router));
+
+
 app.get("/", (req, res) => {
     return res.status(200).json({hello: "hello"})
 })
