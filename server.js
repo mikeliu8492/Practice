@@ -49,6 +49,10 @@ app.get("/crypto", (req,res) => {
     return res.status(200).json("Mike Liu Crypto")
 })
 
+app.get("bug_fix", (req, res) => {
+    return res.status(200).json()
+})
+
 // Start the server
 app.listen(port);
 console.log('Server running on port ' + port);
